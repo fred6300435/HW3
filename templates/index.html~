@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Hello, {{ account }}{% endblock %}
+{% block body %}
+{% for message in flash_messages %}
+  <div class="flash_message">{{message}}<a href="/">&times;</a>
+{% endfor %}
+
+<h3>Your personal information</h3>
+<table border="1" align="left">
+<tr>
+   <th><p>Account</th>
+   <th>{{account}}</th>
+</tr>
+<tr>
+   <th><p>Email</th>
+   <th>{{birth}}</th>
+</tr>
+<tr>
+   <th><p>Introduction</th>
+   <th>{{introduction}}</th>
+</tr>
+</table>
+<br><br><a href="/edit">Edit profile</a>   <a href="/logout">Log out</a>
+{% endblock %}
