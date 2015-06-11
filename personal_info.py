@@ -8,7 +8,7 @@ def open_database(path='personal_info.db'):
     c = db.cursor()
     c.execute( 'CREATE TABLE information( id INTEGER PRIMARY KEY,'
                'account TEXT, password TEXT, birth TEXT, introduction TEXT )' )
-    add_information( db, 'fred', '1234', 'fred@mail', 'Test1' )
+    add_information( db, 'fred', '1111', 'fred@mail.com.tw', 'Test1' )
     add_information( db, 'Tom', '5678', 'Tom@mail', 'Test2' )
     db.commit()
   return db
